@@ -1,0 +1,5 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let task of taskList; let n = index">
+    <b>{{ n + 1 }}. {{ task.name }}</b> tipas: {{ task.type }}
+  </li>
+</ul>
