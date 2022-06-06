@@ -2,17 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ProductsListComponent } from './componenets/products-list/products-list.component';
 import { TasksListComponent } from './componenets/tasks-list/tasks-list.component';
+import { FormsModule } from '@angular/forms';
+import { NewTaskComponent } from './componenets/new-task/new-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsListComponent,
-    TasksListComponent
+    TasksListComponent,
+    NewTaskComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
