@@ -5,7 +5,18 @@
 
 <div class="mb-3">
   <label class="form-label">Tipas: </label>
-  <input type="text" class="form-control" [(ngModel)]="type" />
+  <select class="form-select" [(ngModel)]="type">
+    <option value="Skubus">Skubus</option>
+    <option value="Rutininis">Rutininis</option>
+    <option value="Neskubus">Neskubus</option>
+    <option value="Ypač skubus">Ypač skubus</option>
+  </select>
 </div>
 
-<button class="btn btn-danger" (click)="addTask()">Prideti uzduoti!</button>
+<button
+  class="btn btn-danger"
+  [disabled]="name == '' || type == ''"
+  (click)="addTask()"
+>
+  Prideti uzduoti!
+</button>
