@@ -20,6 +20,10 @@ export class TasksListComponent implements OnInit {
     }
   }
 
+  public deleteTask(n:number) {
+    this.TaskService.deleteTask(n)
+  }
+
   ngOnInit(): void {
   }
 

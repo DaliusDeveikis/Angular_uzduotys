@@ -26,4 +26,8 @@ export class TaskService {
     return this.taskList;
   }
 
+  public deleteTask(n: number) {
+    this.taskList.splice(n,1)
+    localStorage.setItem("TaskList", JSON.stringify(this.taskList));
+  }
 }
