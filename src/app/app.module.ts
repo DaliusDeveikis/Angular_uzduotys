@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { TasksListComponent } from './componenets/tasks-list/tasks-list.component';
 import { FormsModule } from '@angular/forms';
 import { NewTaskComponent } from './componenets/new-task/new-task.component';
+import { TaskStatisticComponent } from './componenets/task-statistic/task-statistic.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksListComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    TaskStatisticComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+<div class="mt-3" *ngIf="taskCount != 0">
+  <div class="alert text-dark alert-dark border-2 border-dark">
+    <strong>ISVISO UZDUOČIŲ:</strong>
+    <strong class="float-end">{{ taskCount }} kiekis</strong>
+  </div>
+</div>
+
+<div class="mt-3" *ngIf="neskubus != 0">
+  <div class="alert alert-secondary">
+    Tipas neskubus: <strong class="float-end">{{ neskubus }} kiekis</strong>
+  </div>
+</div>
+
+<div class="mt-3" *ngIf="rutininis != 0">
+  <div class="alert alert-info">
+    Tipas rutininis: <strong class="float-end">{{ rutininis }} kiekis</strong>
+  </div>
+</div>
+
+<div class="mt-3" *ngIf="skubus != 0">
+  <div class="alert alert-warning">
+    Tipas skubus: <strong class="float-end">{{ skubus }} kiekis</strong>
+  </div>
+</div>
+
+<div class="mt-3" *ngIf="ypac_skubus != 0">
+  <div class="alert alert-danger">
+    Tipas ypač skubus:
+    <strong class="float-end">{{ ypac_skubus }} kiekis</strong>
+  </div>
+</div>

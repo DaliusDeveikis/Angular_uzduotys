@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Tasks } from '../models/task';
 
 @Injectable({
@@ -6,12 +6,14 @@ import { Tasks } from '../models/task';
 })
 export class TaskService {
   public taskList: Tasks[] = [];
+  public onTaskChange = new EventEmitter()
 
   constructor() { 
   }
 
   public addTask (name:string, type:string) {
     this.taskList.push(new Tasks(name,type))
+    this.onTaskChange.emit()
   }
 
   public setTaskLocalStorage() {
@@ -29,5 +31,6 @@ export class TaskService {
   public deleteTask(n: number) {
     this.taskList.splice(n,1)
     localStorage.setItem("TaskList", JSON.stringify(this.taskList));
+    this.onTaskChange.emit()
   }
 }
