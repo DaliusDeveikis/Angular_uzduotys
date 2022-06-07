@@ -11,14 +11,16 @@ export class TasksListComponent implements OnInit {
   public taskList: Tasks[] = [];
 
   constructor(private TaskService: TaskService ) { 
-    this.taskList.push( new Tasks("Išnešti šiukšles", "Skubus"))
-    this.taskList.push( new Tasks("Išvaly kambarius", "Neskubus"))
-    this.taskList.push( new Tasks("Isplauti indus", "Skubus"))
-    this.taskList.push( new Tasks("Sportuoti", "Rutininis"))
+    this.showTaskListFromLocalStorage()
+  }
+
+  public showTaskListFromLocalStorage = ()=>{
+    if (this.TaskService.getTaskLocalStorage() !=null){
+      this.taskList = this.TaskService.getTaskLocalStorage()
+    }
   }
 
   ngOnInit(): void {
-    this.taskList = this.TaskService.taskList
   }
 
 }
