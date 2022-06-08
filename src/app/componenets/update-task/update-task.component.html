@@ -1,0 +1,27 @@
+<div class="card col-md-6 mx-auto">
+  <div class="card-header">Atnaujinti uzduoti!</div>
+  <div class="card-body">
+    <div class="mb-3">
+      <label class="form-label">Uzduotis: </label>
+      <input type="text" class="form-control" [(ngModel)]="name" />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Tipas: </label>
+      <select class="form-select" [(ngModel)]="type">
+        <option value="skubus">Skubus</option>
+        <option value="rutininis">Rutininis</option>
+        <option value="neskubus">Neskubus</option>
+        <option value="ypac_skubus">Ypač skubus</option>
+      </select>
+    </div>
+
+    <button
+      class="btn btn-danger"
+      [disabled]="name == '' || type == ''"
+      (click)="updateTask()"
+    >
+      Atnaujinti uzduoti!
+    </button>
+  </div>
+</div>

@@ -33,4 +33,10 @@ export class TaskService {
     localStorage.setItem("TaskList", JSON.stringify(this.taskList));
     this.onTaskChange.emit()
   }
+
+  public updateTask(index:number,name:string,type:string) {
+    this.taskList[index].name = name
+    this.taskList[index].type = type
+    this.setTaskLocalStorage()
+  }
 }

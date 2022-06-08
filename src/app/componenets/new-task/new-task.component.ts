@@ -21,7 +21,7 @@ export class NewTaskComponent implements OnInit {
   public addTask () {
     this.taskService.addTask(this.name,this.type)
     this.taskService.setTaskLocalStorage()
-    this.router.navigate(['/']);
+    this.router.navigate(['']);
   }
 
   ngOnInit(): void {

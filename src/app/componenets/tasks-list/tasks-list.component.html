@@ -2,18 +2,37 @@
   <div class="card">
     <div class="card-header">Prekiu sarasas:</div>
     <div class="card-body">
-      <ul class="list-group">
-        <li
-          class="list-group-item"
-          *ngFor="let task of taskList; let n = index"
-        >
-          <b>{{ n + 1 }}. {{ task.name }}</b> tipas: {{ task.type }}
-          <button class="btn btn-primary float-end" (click)="deleteTask(n)">
-            Uzduotis baigta
-          </button>
-        </li>
-      </ul>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Task</th>
+            <th scope="col">Type</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of taskList; let n = index">
+            <td scope="row">{{ n + 1 }}</td>
+            <td class="text-uppercase">
+              {{ task.name }}
+            </td>
+            <td class="text-uppercase">{{ task.type }}</td>
+            <td class="float-end">
+              <button class="btn btn-success" (click)="deleteTask(n)">
+                Done
+              </button>
+            </td>
+            <td>
+              <button [routerLink]="['update', n]" class="btn btn-warning">
+                Update
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-  <app-task-statistic></app-task-statistic>
+  <app-task-statistic> </app-task-statistic>
 </div>

@@ -9,12 +9,14 @@ import { TaskStatisticComponent } from './componenets/task-statistic/task-statis
 import { NavigationComponent } from './componenets/navigation/navigation.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './componenets/about/about.component';
+import { UpdateTaskComponent } from './componenets/update-task/update-task.component';
 
 
 const appRoutes: Routes = [
   {path:'', component: TasksListComponent},
   {path:'new', component: NewTaskComponent},
-  {path:'about', component: AboutComponent}
+  {path:'about', component: AboutComponent},
+  {path:'update/:index', component: UpdateTaskComponent}
 ]
 
 @NgModule({
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
     NewTaskComponent,
     TaskStatisticComponent,
     NavigationComponent,
-    AboutComponent
+    AboutComponent,
+    UpdateTaskComponent
   ],
   imports: [
     BrowserModule,
