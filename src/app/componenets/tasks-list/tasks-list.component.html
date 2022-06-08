@@ -1,8 +1,19 @@
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let task of taskList; let n = index">
-    <b>{{ n + 1 }}. {{ task.name }}</b> tipas: {{ task.type }}
-    <button class="btn btn-primary float-end" (click)="deleteTask(n)">
-      Uzduotis baigta
-    </button>
-  </li>
-</ul>
+<div class="col-md-6 mx-auto">
+  <div class="card">
+    <div class="card-header">Prekiu sarasas:</div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let task of taskList; let n = index"
+        >
+          <b>{{ n + 1 }}. {{ task.name }}</b> tipas: {{ task.type }}
+          <button class="btn btn-primary float-end" (click)="deleteTask(n)">
+            Uzduotis baigta
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <app-task-statistic></app-task-statistic>
+</div>

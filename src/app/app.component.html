@@ -1,21 +1,8 @@
 <div class="container">
+  <app-navigation></app-navigation>
   <div class="row mt-5">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-header">Prekiu sarasas:</div>
-        <div class="card-body">
-          <app-tasks-list></app-tasks-list>
-        </div>
-      </div>
-      <app-task-statistic></app-task-statistic>
-    </div>
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-header">Prideti nauja uzduoti!</div>
-        <div class="card-body">
-          <app-new-task></app-new-task>
-        </div>
-      </div>
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
