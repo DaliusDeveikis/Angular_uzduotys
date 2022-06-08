@@ -2,7 +2,8 @@
   <div class="card">
     <div class="card-header">Prekiu sarasas:</div>
     <div class="card-body">
-      <table class="table">
+      <h5 *ngIf="taskList.length == 0">Empty</h5>
+      <table class="table" *ngIf="taskList.length != 0">
         <thead>
           <tr>
             <th scope="col">#</th>
