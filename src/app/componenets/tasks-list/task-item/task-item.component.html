@@ -1,0 +1,21 @@
+<b>{{ index + 1 }}</b
+>.
+<span class="text-uppercase">
+  <b>{{ task?.name }}</b> &nbsp;&nbsp;&nbsp;
+</span>
+<span class="text-uppercase"
+  ><small
+    >TIPAS: <mark>{{ task?.type }}</mark></small
+  ></span
+>
+
+<button class="btn btn-success btn-sm float-end m-1" (click)="deleteTask()">
+  Done
+</button>
+
+<button
+  [routerLink]="['update', index]"
+  class="btn btn-warning btn-sm float-end m-1"
+>
+  Update
+</button>

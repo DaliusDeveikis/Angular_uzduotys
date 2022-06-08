@@ -10,6 +10,7 @@ import { NavigationComponent } from './componenets/navigation/navigation.compone
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './componenets/about/about.component';
 import { UpdateTaskComponent } from './componenets/update-task/update-task.component';
+import { TaskItemComponent } from './componenets/tasks-list/task-item/task-item.component';
 
 
 const appRoutes: Routes = [
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     TaskStatisticComponent,
     NavigationComponent,
     AboutComponent,
-    UpdateTaskComponent
+    UpdateTaskComponent,
+    TaskItemComponent
   ],
   imports: [
     BrowserModule,
